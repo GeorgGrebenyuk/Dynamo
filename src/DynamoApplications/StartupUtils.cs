@@ -218,41 +218,41 @@ namespace Dynamo.Applications
         /// <param name="asmPath">Path to directory containing geometry library binaries</param>
         /// <param name="hostName">Dynamo variation identified by host.</param>
         /// <returns></returns>
-        public static DynamoModel MakeModel(bool CLImode, string asmPath = "", string hostName ="")
-        {
-            PreloadASM(asmPath, out string geometryFactoryPath, out string preloaderLocation);
-            return StartDynamoWithDefaultConfig(CLImode, geometryFactoryPath, preloaderLocation, new HostAnalyticsInfo() { HostName = hostName });
-        }
+        //public static DynamoModel MakeModel(bool CLImode, string asmPath = "", string hostName ="")
+        //{
+        //    PreloadASM(asmPath, out string geometryFactoryPath, out string preloaderLocation);
+        //    return StartDynamoWithDefaultConfig(CLImode, geometryFactoryPath, preloaderLocation, new HostAnalyticsInfo() { HostName = hostName });
+        //}
 
-        /// <summary>
-        /// Use this overload to construct a DynamoModel when the location of ASM to use is known and host analytics info is known.
-        /// </summary>
-        /// <param name="CLImode">CLI mode starts the model in test mode and uses a separate path resolver.</param>
-        /// <param name="asmPath">Path to directory containing geometry library binaries</param>
-        /// <param name="info">Host analytics info</param>
-        /// <returns></returns>
-        public static DynamoModel MakeModel(bool CLImode, string asmPath = "", HostAnalyticsInfo info = new HostAnalyticsInfo())
-        {
-            PreloadASM(asmPath, out string geometryFactoryPath, out string preloaderLocation);
-            return StartDynamoWithDefaultConfig(CLImode, geometryFactoryPath, preloaderLocation, info);
-        }
+        ///// <summary>
+        ///// Use this overload to construct a DynamoModel when the location of ASM to use is known and host analytics info is known.
+        ///// </summary>
+        ///// <param name="CLImode">CLI mode starts the model in test mode and uses a separate path resolver.</param>
+        ///// <param name="asmPath">Path to directory containing geometry library binaries</param>
+        ///// <param name="info">Host analytics info</param>
+        ///// <returns></returns>
+        //public static DynamoModel MakeModel(bool CLImode, string asmPath = "", HostAnalyticsInfo info = new HostAnalyticsInfo())
+        //{
+        //    PreloadASM(asmPath, out string geometryFactoryPath, out string preloaderLocation);
+        //    return StartDynamoWithDefaultConfig(CLImode, geometryFactoryPath, preloaderLocation, info);
+        //}
 
-        /// <summary>
-        /// TODO (DYN-2118) remove this method in 3.0 and unify this method with the overload above.
-        /// Use this overload to construct a DynamoModel when the location of ASM to use is known.
-        /// </summary>
-        /// <param name="CLImode">CLI mode starts the model in test mode and uses a seperate path resolver.</param>
-        /// <param name="asmPath">Path to directory containing geometry library binaries</param>
-        /// <returns></returns>
-        [Obsolete("This method will be removed in Dynamo 3.0 - please use the version with more parameters")]
-        public static DynamoModel MakeModel(bool CLImode, string asmPath)
-        {
-            PreloadASM(asmPath, out string geometryFactoryPath, out string preloaderLocation);
-            return StartDynamoWithDefaultConfig(CLImode, geometryFactoryPath, preloaderLocation);
-        }
+        ///// <summary>
+        ///// TODO (DYN-2118) remove this method in 3.0 and unify this method with the overload above.
+        ///// Use this overload to construct a DynamoModel when the location of ASM to use is known.
+        ///// </summary>
+        ///// <param name="CLImode">CLI mode starts the model in test mode and uses a seperate path resolver.</param>
+        ///// <param name="asmPath">Path to directory containing geometry library binaries</param>
+        ///// <returns></returns>
+        //[Obsolete("This method will be removed in Dynamo 3.0 - please use the version with more parameters")]
+        //public static DynamoModel MakeModel(bool CLImode, string asmPath)
+        //{
+        //    PreloadASM(asmPath, out string geometryFactoryPath, out string preloaderLocation);
+        //    return StartDynamoWithDefaultConfig(CLImode, geometryFactoryPath, preloaderLocation);
+        //}
 
         //TODO (DYN-2118) remove this method in 3.0 and unify this method with the overload above.
-        [Obsolete("This method will be removed in Dynamo 3.0 - please use the version with more parameters")]
+        //[Obsolete("This method will be removed in Dynamo 3.0 - please use the version with more parameters")]
         public static DynamoModel MakeModel(bool CLImode)
         {
             PreloadASM(string.Empty, out string geometryFactoryPath, out string preloaderLocation);
@@ -265,14 +265,14 @@ namespace Dynamo.Applications
             {
                 geometryFactoryPath = string.Empty;
                 preloaderLocation = string.Empty;
-                try
-                {
-                    PreloadShapeManager(ref geometryFactoryPath, ref preloaderLocation);
-                }
-                catch (Exception e)
-                {
-                    ASMPreloadFailure?.Invoke(e.Message);
-                }
+                //try
+                //{
+                //    PreloadShapeManager(ref geometryFactoryPath, ref preloaderLocation);
+                //}
+                //catch (Exception e)
+                //{
+                //    ASMPreloadFailure?.Invoke(e.Message);
+                //}
                 return;
             }
 
