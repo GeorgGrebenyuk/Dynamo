@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{F6410FD4-0ED6-4253-8A5A-83E3715998E6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>nanoCAD.DynamoApp</RootNamespace>
+    <AssemblyName>NcDynamo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+    <ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\AnyCPU\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\AnyCPU\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DSIronPython">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DynamoCore">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DynamoCoreWpf">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DynamoShapeManager">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Greg">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="hostdbmgd">
+      <HintPath>E:\30_Coding\SDK\NC_SDK_22.0.5944.3726.6053\include-x64\hostdbmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="hostmgd">
+      <HintPath>E:\30_Coding\SDK\NC_SDK_22.0.5944.3726.6053\include-x64\hostmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.Scripting" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ProtoCore">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PythonNodeModels">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcDynamo.cs" />
+    <Compile Include="AcDynamoModel.cs" />
+    <Compile Include="AcDynamoRuntime.cs" />
+    <Compile Include="AcDynamoViewModel.cs" />
+    <Compile Include="AcPathResolver.cs" />
+    <Compile Include="AssemblyInformation.cs" />
+    <Compile Include="GeometryFactoryPathDetector.cs" />
+    <Compile Include="ProductLocator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Resources.cs" />
+    <Compile Include="SchedulerThread.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Category\AutoCAD.svg" />
+    <EmbeddedResource Include="Resources\LayoutSpecs.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NcDynamoServices\NcDynamoServices.csproj">
+      <Project>{bcf6d74e-8348-481b-a038-33e42ff5a18c}</Project>
+      <Name>NcDynamoServices</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

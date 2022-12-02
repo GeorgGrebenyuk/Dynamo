@@ -1,0 +1,272 @@
+﻿{
+  "sections": [
+    {
+      "text": "default",
+      "iconUrl": "",
+      "elementType": "section",
+      "showHeader": false,
+      "include": [],
+      "childElements": [
+        {
+          "text": "AutoCAD",
+          "iconUrl": "/icons/Category.AutoCAD.svg",
+          "elementType": "category",
+          "include": [],
+          "childElements": [
+            {
+              "text": "Objects",
+              "iconUrl": "",
+              "elementType": "group",
+              "include": [],
+              "childElements": [
+                {
+                  "text": "Block",
+                  "iconUrl": "",
+                  "elementType": "group",
+                  "include": [
+                    {
+                      "path": "nanoCADNodes.nanoCAD.DynamoNodes.Block",
+                      "inclusive": false
+                    }
+                  ],
+                  "childElements": [
+                  ]
+                },
+                {
+                  "text": "BlockReference",
+                  "iconUrl": "",
+                  "elementType": "group",
+                  "include": [
+                    {
+                      "path": "nanoCADNodes.nanoCAD.DynamoNodes.BlockReference",
+                      "inclusive": false
+                    }
+                  ],
+                  "childElements": [
+                  ]
+                },
+                {
+                  "text": "Object",
+                  "iconUrl": "",
+                  "elementType": "group",
+                  "include": [
+                    {
+                      "path": "nanoCADNodes.nanoCAD.DynamoNodes.Object",
+                      "inclusive": false
+                    }
+                  ],
+                  "childElements": [
+                  ]
+                },
+                {
+                  "text": "Line",
+                  "iconUrl": "",
+                  "elementType": "group",
+                  "include": [
+                    {
+                      "path": "nanoCADNodes.nanoCAD.DynamoNodes.Line",
+                      "inclusive": false
+                    }
+                  ],
+                  "childElements": [
+                  ]
+                },
+                {
+                  "text": "Polyline",
+                  "iconUrl": "",
+                  "elementType": "group",
+                  "include": [
+                    {
+                      "path": "nanoCADNodes.nanoCAD.DynamoNodes.Polyline",
+                      "inclusive": false
+                    }
+                  ],
+                  "childElements": [
+                  ]
+                },
+                {
+                  "text": "Polyline3D",
+                  "iconUrl": "",
+                  "elementType": "group",
+                  "include": [
+                    {
+                      "path": "nanoCADNodes.nanoCAD.DynamoNodes.Polyline3D",
+                      "inclusive": false
+                    }
+                  ],
+                  "childElements": [
+                  ]
+                },
+                {
+                  "text": "Circle",
+                  "iconUrl": "",
+                  "elementType": "group",
+                  "include": [
+                    {
+                      "path": "nanoCADNodes.nanoCAD.DynamoNodes.Circle",
+                      "inclusive": false
+                    }
+                  ],
+                  "childElements": [
+                  ]
+                },
+                {
+                  "text": "Solid",
+                  "iconUrl": "",
+                  "elementType": "group",
+                  "include": [
+                    {
+                      "path": "nanoCADNodes.nanoCAD.DynamoNodes.Solid",
+                      "inclusive": false
+                    }
+                  ],
+                  "childElements": [
+                  ]
+                },
+                {
+                  "text": "Face",
+                  "iconUrl": "",
+                  "elementType": "group",
+                  "include": [
+                    {
+                      "path": "nanoCADNodes.nanoCAD.DynamoNodes.Face",
+                      "inclusive": false
+                    }
+                  ],
+                  "childElements": [
+                  ]
+                },
+                {
+                  "text": "Mesh",
+                  "iconUrl": "",
+                  "elementType": "group",
+                  "include": [
+                    {
+                      "path": "nanoCADNodes.nanoCAD.DynamoNodes.Mesh",
+                      "inclusive": false
+                    }
+                  ],
+                  "childElements": [
+                  ]
+                },
+                {
+                  "text": "Text",
+                  "iconUrl": "",
+                  "elementType": "group",
+                  "include": [
+                    {
+                      "path": "nanoCADNodes.nanoCAD.DynamoNodes.Text",
+                      "inclusive": false
+                    }
+                  ],
+                  "childElements": [
+                  ]
+                },
+                {
+                  "text": "MText",
+                  "iconUrl": "",
+                  "elementType": "group",
+                  "include": [
+                    {
+                      "path": "nanoCADNodes.nanoCAD.DynamoNodes.MText",
+                      "inclusive": false
+                    }
+                  ],
+                  "childElements": [
+                  ]
+                },
+                {
+                  "text": "Layer",
+                  "iconUrl": "",
+                  "elementType": "group",
+                  "include": [
+                    {
+                      "path": "nanoCADNodes.nanoCAD.DynamoNodes.Layer",
+                      "inclusive": false
+                    }
+                  ],
+                  "childElements": [
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Selection",
+              "iconUrl": "",
+              "elementType": "group",
+              "include": [
+                {
+                  "path": "Autodesk.AutoCAD.DynamoNodes.Selection",
+                  "inclusive": false
+                }
+              ],
+              "childElements": [
+              ]
+            },
+            {
+              "text": "Document",
+              "iconUrl": "",
+              "elementType": "group",
+              "include": [
+                {
+                  "path": "nanoCADNodes.nanoCAD.DynamoNodes.Document",
+                  "inclusive": false
+                }
+              ],
+              "childElements": [
+              ]
+            },
+            {
+              "text": "PropertySets",
+              "iconUrl": "",
+              "elementType": "group",
+              "include": [],
+              "childElements": [
+                {
+                  "text": "Property",
+                  "iconUrl": "",
+                  "elementType": "group",
+                  "include": [
+                    {
+                      "path": "nanoCADNodes.nanoCAD.DynamoNodes.Property",
+                      "inclusive": false
+                    }
+                  ],
+                  "childElements": [
+                  ]
+                },
+                {
+                  "text": "PropertySet",
+                  "iconUrl": "",
+                  "elementType": "group",
+                  "include": [
+                    {
+                      "path": "nanoCADNodes.nanoCAD.DynamoNodes.PropertySet",
+                      "inclusive": false
+                    }
+                  ],
+                  "childElements": [
+                  ]
+                },
+                {
+                  "text": "PropertySetDefinition",
+                  "iconUrl": "",
+                  "elementType": "group",
+                  "include": [
+                    {
+                      "path": "nanoCADNodes.nanoCAD.DynamoNodes.PropertySetDefinition",
+                      "inclusive": false
+                    }
+                  ],
+                  "childElements": [
+                  ]
+                }
+              ]
+            }
+
+          ]
+        }
+      ]
+    }
+  ]
+}
