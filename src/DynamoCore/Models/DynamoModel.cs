@@ -440,7 +440,7 @@ namespace Dynamo.Models
             bool StartInTestMode { get; set; }
             IUpdateManager UpdateManager { get; set; }
             ISchedulerThread SchedulerThread { get; set; }
-            string GeometryFactoryPath { get; set; }
+            //string GeometryFactoryPath { get; set; }
             IAuthProvider AuthProvider { get; set; }
             IEnumerable<IExtension> Extensions { get; set; }
             TaskProcessMode ProcessMode { get; set; }
@@ -465,7 +465,7 @@ namespace Dynamo.Models
             public bool StartInTestMode { get; set; }
             public IUpdateManager UpdateManager { get; set; }
             public ISchedulerThread SchedulerThread { get; set; }
-            public string GeometryFactoryPath { get; set; }
+            //public string GeometryFactoryPath { get; set; }
             public IAuthProvider AuthProvider { get; set; }
             public IEnumerable<IExtension> Extensions { get; set; }
             public TaskProcessMode ProcessMode { get; set; }
@@ -564,7 +564,7 @@ namespace Dynamo.Models
             Scheduler = new DynamoScheduler(thread, config.ProcessMode);
             Scheduler.TaskStateChanged += OnAsyncTaskStateChanged;
 
-            geometryFactoryPath = config.GeometryFactoryPath;
+            //geometryFactoryPath = config.GeometryFactoryPath;
 
             IPreferences preferences = CreateOrLoadPreferences(config.Preferences);
             if (preferences is PreferenceSettings settings)
