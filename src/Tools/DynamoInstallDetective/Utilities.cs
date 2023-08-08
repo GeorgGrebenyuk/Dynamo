@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 
@@ -104,6 +105,33 @@ namespace DynamoInstallDetective
                             p.InstallLocation,
                             p.VersionInfo));
             }
+        }
+        public static IEnumerable FindInternalASMBinaries (string current_directory)
+        {
+            /*
+             ASM_version = 227
+            TODO: для будущих реализов сделать учет других версий от более новых версий Autodesk продуктов
+             */
+            string ASM_folder = Path.Combine(current_directory, "ASM");
+            List<KeyValuePair<string, Tuple<int, int, int, int>>> asm_libs = new List<KeyValuePair<string, Tuple<int, int, int, int>>>();
+            //TODO: предусмотреть исключение
+            if (!Directory.Exists(ASM_folder)) return asm_libs;
+            else
+            {
+                foreach (string sub_dir_path in Directory.GetDirectories(ASM_folder, "*.*", SearchOption.TopDirectoryOnly))
+                {
+                    string dir_asm_name = new DirectoryInfo(sub_dir_path).Name;
+                    Tuple<int, int, int, int> version = null;
+                    if (dir_asm_name == "227") version = Tuple.Create(227, 0, 0, 0);
+                    else if (dir_asm_name == "228") version = Tuple.Create(228, 0, 0, 0);
+
+                    if (version != null) asm_libs.Add(new KeyValuePair<string, Tuple<int, int, int, int>>(sub_dir_path, version));
+
+                }
+                return asm_libs;
+            }
+
+
         }
     }
 }

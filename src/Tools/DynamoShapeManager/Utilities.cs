@@ -536,16 +536,16 @@ namespace DynamoShapeManager
             var type = assembly.GetType("DynamoInstallDetective.Utilities");
 
             var installationsMethod = type.GetMethod(
-                "FindMultipleProductInstallations",
+                "FindInternalASMBinaries",
                 BindingFlags.Public | BindingFlags.Static);
 
             if (installationsMethod == null)
             {
-                throw new MissingMethodException("Method 'DynamoInstallDetective.Utilities.FindProductInstallations' not found");
+                throw new MissingMethodException("Method 'DynamoInstallDetective.Utilities.FindInternalASMBinaries' not found");
             }
 
 
-            var methodParams = new object[] { ProductsWithASM, ASMFileMask };
+            var methodParams = new object[] { Path.GetDirectoryName(assemblyPath) };
             var installs = installationsMethod.Invoke(null, methodParams) as IEnumerable;
 
             return installs.Cast<KeyValuePair<string, Tuple<int, int, int, int>>>().Where(install =>
